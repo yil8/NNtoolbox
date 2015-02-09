@@ -56,12 +56,13 @@ def main():
 #     outfile = open(sys.argv[1], 'w')
     N = int(sys.argv[1])
     label = int(sys.argv[2])
+    x = float(sys.argv[3])
     
     for i in range(0, N):
         #x_1, x_2 = circle(0, 0, x, label)
         #x_1, x_2 = line(1, 200, label)
-        #x_1, x_2 = background(10)
-        x_1, x_2 = bound(-3, -1, 5, 5, label)
+        x_1, x_2 = background(x)
+        #x_1, x_2 = bound(-3, -1, 5, 5, label)
         
         print '\t'.join([str(x_1), str(x_2), str(label)])
         
